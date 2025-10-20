@@ -2,32 +2,80 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Richard Baltazar</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Richard Baltazar Website</title>
+  <link href="images/me.jpg" rel="icon">
+  <style>
+    footer {border: 2px solid}
+  </style>
 </head>
+
 <body>
+  <script>
+    class HelloWorldElement extends HTMLElement {
+      connectedCallback() {
+        console.log("Hello world!");
+      }
+    }
+    customElements.define('hello-world', HelloWorldElement);
+  </script>
+
+  <hello-world></hello-world>
+  
   <header>
-    <h1>Richard Baltazar</h1>
-    <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="skill.html">Skills</a></li>
-        <li><a href="contact.html">Contact</a></li>
-        <li><a href="experiments.html">Experiments</a></li>
-      </ul>
-    </nav>
+    <picture>  
+      <img src="images/me.jpg" alt="my-image" width="200" height="200">
+    </picture>  
+    <div>
+      <h1>Hi!</h1>
+      <p>I'm <strong>Richard Baltazar</strong> <br> <i>Aspiring Data Analyst</i></p>
+    </div>
   </header>
+
+  <noscript>
+    <p><strong>Note:</strong> Some features may not work because JavaScript is disabled.</p>
+  </noscript>
 
   <main>
     <section>
-      <h2>Welcome</h2>
-      <p><em>Aspiring Data Analyst.</em> This is a minimal HTML-only site for HW2.</p>
+     <h2>Welcome to my site</h2> 
+        <nav>
+            <ul>
+              <li><a>Home</a></li>
+              <li><a>About</a></li>
+              <li><a>Skills</a></li>
+              <li><a>Contact</a></li>
+            </ul>
+        </nav>
     </section>
+
+    <script src="https://www.googletagmanager.com/gtag/js?id=UA-000000-2"></script>
   </main>
 
   <footer>
     <p>&copy; 2025 Richard Baltazar</p>
+
+      <svg width="40" height="40" viewBox="0 0 100 100">
+        <circle 
+          cx="50" 
+          cy="50" 
+          r="48" 
+          fill="black" 
+          stroke="white" 
+          stroke-width="2"
+        />
+        <text 
+          x="50" 
+          y="60" 
+          text-anchor="middle" 
+          font-size="28" 
+          fill="white" 
+          font-family="Arial, sans-serif"
+        >
+          RB
+        </text>
+      </svg>
+
   </footer>
 </body>
 </html>
